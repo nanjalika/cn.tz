@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中坦达资 Consultancy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container flex">
+    <div class="logo">
+        <img src="images/logo.PNG" alt="中坦达资logo">
+        <h2>中坦达资</h2>
+    </div>
+
+    <nav>
+      <a href="#home" data-en="Home" data-zh="首页"></a>
+      <a href="#services" data-en="Services" data-zh="服务"></a>
+      <a href="#stats" data-en="Performance" data-zh="成果"></a>
+      <a href="#contact" data-en="Contact" data-zh="联系"></a>
+    </nav>
+
+    <button id="langToggle">中文</button>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="overlay">
+    <h1 data-en="Professional Consultancy for Chinese Citizens in Tanzania"
+        data-zh="为在坦桑尼亚的中国公民提供专业咨询服务"></h1>
+
+    <p data-en="Legal, tax, and business solutions built for serious investors."
+       data-zh="为严肃投资者提供法律、税务和商业解决方案。"></p>
+<br>
+    <button class="btn" onclick="openPopup()"
+      data-en="Start Consultation"
+      data-zh="立即咨询"></button>
+  </div>
+</section>
+
+<section id="stats" class="section dark">
+  <div class="container grid">
+    <div class="stat">
+      <h2 class="counter" data-target="250">0</h2>
+      <p data-en="Clients Assisted" data-zh="服务客户"></p>
+    </div>
+
+    <div class="stat">
+      <h2 class="counter" data-target="120">0</h2>
+      <p data-en="Companies Registered" data-zh="注册公司"></p>
+    </div>
+
+    <div class="stat">
+      <h2>2+</h2>
+      <p data-en="Years Experience" data-zh="经验年数"></p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2 data-en="Core Services" data-zh="核心服务"></h2><br>
+
+    <div class="grid">
+      <div class="card">
+  <h3 data-en="Company Registration" data-zh="公司注册"></h3>
+  <p data-en="We assist both individuals and companies with fast, compliant company registration in Tanzania. Whether urgent or standard cases, we ensure proper setup without errors."
+     data-zh="我们为个人和企业提供快速且合规的公司注册服务，无论紧急或常规需求，确保注册过程准确无误。"></p>
+</div>
+
+<div class="card">
+  <h3 data-en="Legal Services" data-zh="法律服务"></h3>
+  <p data-en="We provide legal support for contracts, disputes, and compliance. We are a private firm, not part of the government, but we work closely with official institutions to ensure correct procedures."
+     data-zh="我们提供合同、纠纷及合规方面的法律支持。我们是私人机构，不隶属于政府，但与相关部门保持合作以确保流程合规。"></p>
+</div>
+
+<div class="card">
+  <h3 data-en="Tax & Auditing" data-zh="税务与审计"></h3>
+  <p data-en="We handle tax planning, filing, and auditing for individuals and companies. Our approach ensures accuracy, compliance, and protection from unnecessary penalties."
+     data-zh="我们为个人和企业提供税务规划、申报及审计服务，确保准确合规并避免不必要的处罚。"></p>
+</div>
+
+<div class="card">
+  <h3 data-en="Investment Guidance" data-zh="投资指导"></h3>
+  <p data-en="We guide foreign clients through Tanzania investment laws, procedures, and risks. We provide clear information so you can make safe and informed decisions."
+     data-zh="我们为外国客户提供坦桑尼亚投资法律、流程及风险方面的指导，帮助您做出安全且明智的决策。"></p>
+</div>
+    </div><br>
+    <p data-en="We serve both individuals and companies. Our services are available for normal and urgent situations. We are committed to meeting each client's needs with patience, professionalism, and strict safety standards."
+   data-zh="我们同时服务个人和企业客户，支持常规及紧急需求。我们承诺以耐心、专业和严格的安全标准满足每一位客户的需求。"></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="testimonial-box">
+
+      <div class="testimonial active">
+        <div class="stars">★★★★★</div>
+        <p>“中坦达资服务非常专业，我们公司注册很顺利完成，效率很高。以后一定继续合作。”</p>
+        <div class="user"><div class="avatar"></div><span>张伟</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>“他们很耐心，一步一步帮我处理问题，让人很放心。”</p>
+        <div class="user"><div class="avatar"></div><span>李强</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>“Very reliable service. They handled everything correctly.”</p>
+        <div class="user"><div class="avatar"></div><span>Mr. Liu</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="contact" class="section dark">
+  <div class="container contact-grid">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+      <!-- ROW 1: CONTACT DETAILS -->
+      <div class="contact-info">
+        <h2 data-en="Contact Us" data-zh="联系我们"></h2>
+
+        <p>Email: nanjalika@icloud.com</p>
+        <p>Phone: +255 746 220 763</p>
+        <p>
+          <a href="https://wa.me/255746220763" target="_blank">
+            WhatsApp Chat
+          </a>
+        </p>
+      </div>
+
+      <!-- ROW 2: QR CODES -->
+      <div class="qr-section">
+        <div>
+          <img src="images/logo.PNG" alt="WeChat QR">
+        </div>
+
+        <div>
+    
+          <img src="images/wechat-qr.jpg" alt="WhatsApp QR">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (70%) -->
+    <div class="right">
+      <div class="slider">
+        <img src="images/2.jpeg" class="slide active">
+        <img src="images/2.jpeg" class="slide">
+        <img src="images/2.jpeg" class="slide">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>
+    <a href="#" onclick="openTerms()">Terms & Conditions</a> |
+    <a href="#" onclick="openPrivacy()">Privacy Policy</a>
+  </p>
+   <p>Dar es Salaam, Tanzania  © 2026 中坦达资</p>
+</footer>
+
+<div class="chat-btn" onclick="openPopup()">💬</div>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span onclick="closePopup()" class="close">×</span>
+
+    <h3 data-en="Consultation Form" data-zh="咨询表"></h3>
+
+    <form action="https://formspree.io/f/mgopzdqa" method="POST">
+      <input type="text" name="name" placeholder="Name / 姓名" required>
+      <input type="email" name="email" placeholder="Email / 邮箱" required>
+      <textarea name="message" placeholder="Message / 信息" required></textarea>
+
+      <input type="hidden" name="_subject" value="New Inquiry - 中坦达资">
+
+      <button type="submit">Submit</button>
+    </form>
+
+  </div>
+</div>
+<div id="termsPopup" class="popup">
+  <div class="popup-content large">
+    <span class="close" onclick="closeTerms()">×</span>
+    <h3>Terms & Conditions</h3><br><br>
+    <p>
+      This company is a private consultancy firm. We are not a government entity. <br> <br>
+      We provide advisory and assistance services based on Tanzanian laws and regulations. <br><br>
+      Clients are responsible for providing accurate information. <br><br>We are not liable for
+      delays caused by external institutions.
+    </p>
+  </div>
+</div>
+
+<div id="privacyPopup" class="popup">
+  <div class="popup-content large">
+    <span class="close" onclick="closePrivacy()">×</span>
+    <h3>Privacy Policy</h3><br><br>
+    <p>
+      We collect client information only for service delivery. <br><br>We do not sell or share
+      your data with third parties. <br><br>All information is handled with strict confidentiality
+      and security standards.
+    </p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
