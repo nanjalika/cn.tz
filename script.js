@@ -1,11 +1,13 @@
 let lang="zh";
-
 function applyLanguage(){
   document.querySelectorAll("[data-en]").forEach(el=>{
     el.textContent = el.getAttribute(`data-${lang}`);
   });
 
   document.getElementById("langToggle").textContent =
+    lang==="en" ? "中文" : "EN";
+
+  document.getElementById("langToggleMobile").textContent =
     lang==="en" ? "中文" : "EN";
 }
 
@@ -14,18 +16,12 @@ document.getElementById("langToggle").onclick=()=>{
   applyLanguage();
 };
 
+document.getElementById("langToggleMobile").onclick=()=>{
+  lang = lang==="en" ? "zh" : "en";
+  applyLanguage();
+};
 window.onload = applyLanguage;
 
-document.getElementById("langToggle").onclick=()=>{
-lang=lang==="en"?"zh":"en";
-
-document.querySelectorAll("[data-en]").forEach(el=>{
-el.textContent=el.getAttribute(`data-${lang}`);
-});
-
-document.getElementById("langToggle").textContent=
-lang==="en"?"中文":"EN";
-};
 
 function openPopup(){
 document.getElementById("popup").style.display="block";
@@ -93,3 +89,22 @@ function rotate(){
 }
 
 setInterval(rotate,4000);
+function openMenu(){
+  document.getElementById("mobileMenu").style.display="flex";
+}
+
+function closeMenu(){
+  document.getElementById("mobileMenu").style.display="none";
+}
+document.getElementById("hamburger").onclick=openMenu;
+/* URGENCY */
+function checkUrgency(){
+  let value=document.getElementById("urgency").value;
+  let text=document.getElementById("urgentText");
+
+  if(value==="urgent"){
+    text.style.display="block";
+  }else{
+    text.style.display="none";
+  }
+}
