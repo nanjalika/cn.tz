@@ -20,6 +20,129 @@
 <link rel="canonical" href="https://nanjalika.github.io/cn.tz/">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-blue: #123a6f;
+            --text-black: #1a1a1a;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #team-download-division {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-white);
+            color: var(--text-black);
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Team Grid Layout */
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+        }
+
+        .member-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            width: 350px;
+            text-align: center;
+            padding: 30px;
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--primary-blue);
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #f0f0f0;
+        }
+
+        .member-name {
+            color: var(--primary-blue);
+            font-size: 1.6rem;
+            margin: 10px 0 5px 0;
+        }
+
+        .member-position {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .member-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-black);
+        }
+
+        /* Downloadables Section */
+        .downloads-box {
+            background-color: #f9fbfd;
+            border: 1px solid #e1e8f0;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .downloads-title {
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-download:hover {
+            background-color: #0d2a52;
+        }
+
+        /* Translation Toggle Helper (Hidden by default unless translation script is active) */
+        [lang="zh"] { display: none; }
+        
+        /* If your translation formula uses a class like .show-zh */
+        .chinese-mode [lang="en"] { display: none; }
+        .chinese-mode [lang="zh"] { display: block; }
+
+    </style>
 </head>
 
 <body>
@@ -154,6 +277,68 @@
     </div>
   </div>
 </section>
+<section id="team-download-division">
+    <h2 class="section-title">
+        <span lang="en">Meet Our Leadership</span>
+        <span lang="zh">会见我们的领导团队</span>
+    </h2>
+
+    <div class="team-container">
+        
+        <div class="member-card">
+            <img src="nathanael.png" alt="Nathanael" class="member-photo">
+            <h3 class="member-name">Nathanael N.</h3>
+            <span class="member-position">
+                <span lang="en">Managing Director & Founder</span>
+                <span lang="zh">董事总经理兼创始人</span>
+            </span>
+            <p class="member-desc">
+                <span lang="en">Nathanael leads the strategic vision of Zhongtan Hengda, specializing in bridging international business relations and Tanzanian market expansion through expert consultancy.</span>
+                <span lang="zh">Nathanael 领导中坦恒达的战略愿景，专门通过专家咨询架起国际业务关系与坦桑尼亚市场扩张的桥梁。</span>
+            </p>
+        </div>
+
+        <div class="member-card">
+            <img src="abdallah.png" alt="Abdallah" class="member-photo">
+            <h3 class="member-name">Abdalla</h3>
+            <span class="member-position">
+                <span lang="en">Finance & Tax Director</span>
+                <span lang="zh">财务与税务总监</span>
+            </span>
+            <p class="member-desc">
+                <span lang="en">Abdalla oversees the financial integrity and tax compliance frameworks for our clients, ensuring all operations align with Tanzanian regulatory standards.</span>
+                <span lang="zh">Abdalla 负责监督客户的财务诚信和税务合规框架，确保所有业务均符合坦桑尼亚监管标准。</span>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="downloads-box">
+        <h3 class="downloads-title">
+            <span lang="en">Resources & Documents</span>
+            <span lang="zh">资源与文档</span>
+        </h3>
+        <div class="download-grid">
+            <a href="business-card.pdf" download class="btn-download">
+                <span lang="en">Business Card</span>
+                <span lang="zh">名片下载</span>
+            </a>
+            <a href="inquiry-form.pdf" download class="btn-download">
+                <span lang="en">Inquiry Form</span>
+                <span lang="zh">咨询表</span>
+            </a>
+            <a href="terms-and-conditions.pdf" download class="btn-download">
+                <span lang="en">Terms & Conditions</span>
+                <span lang="zh">条款和条件</span>
+            </a>
+            <a href="service-costs.pdf" download class="btn-download">
+                <span lang="en">Service Costs</span>
+                <span lang="zh">服务费用</span>
+            </a>
+        </div>
+    </div>
+</section>
+
 <section id="contact" class="section dark">
   <div class="container contact-grid">
 
