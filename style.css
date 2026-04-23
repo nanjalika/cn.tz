@@ -279,39 +279,100 @@ button:hover, .btn:hover, input[type="submit"]:hover {
 
 .footer a { color: var(--paleblue); text-decoration: none; margin: 0 10px; }
 
-/* --- 14. MOBILE MENU & RESPONSIVENESS --- */
-#hamburger {
-    display: none;
-    font-size: 28px;
-    background: none;
-    color: white;
-}
-
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: var(--navy);
-    z-index: 3000;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.mobile-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-}
-
-.mobile-nav a { font-size: 1.5rem; }
+/* --- 14. MOBILE VIEW REFINEMENTS (iOS & Android) --- */
 
 @media (max-width: 768px) {
-    nav { display: none; }
-    #hamburger { display: block; }
-    .hero h1 { font-size: 2rem !important; }
-    .counter { font-size: 2.5rem; }
-    .container { width: 90%; }
+    /* Container adjustment for mobile safety margins */
+    .container {
+        width: 92%;
+    }
+
+    /* Fix Header & Logo */
+    .header {
+        padding: 10px 0;
+    }
+    .logo img {
+        height: 45px; /* Smaller logo for mobile */
+    }
+    .logo h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Fix Hero Section (The main issue in your screenshot) */
+    .hero {
+        height: 80vh; /* Give more vertical room */
+        padding: 0 20px;
+    }
+    .hero h1 {
+        font-size: 1.8rem !important; /* Scaled down from 3.5rem */
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 1rem !important;
+        padding: 0 10px;
+    }
+
+    /* Fix Counters */
+    .grid {
+        gap: 20px;
+    }
+    .stat {
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .counter {
+        font-size: 2.8rem;
+    }
+
+    /* Fix Buttons (Side-by-Side to Stacked for mobile) */
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+        padding: 40px 20px;
+    }
+    .btn-large {
+        width: 100%; /* Full width for easier thumb-tapping */
+        text-align: center;
+    }
+
+    /* Fix Testimonials */
+    .testimonial-box {
+        height: 250px; /* Taller for text wrapping */
+    }
+    .testimonial p {
+        font-size: 0.95rem;
+    }
+
+    /* Fix Leadership Cards */
+    .member-card {
+        width: 100%; /* Full width cards */
+        margin-bottom: 20px;
+    }
+
+    /* Fix Form Spacing */
+    .form-box {
+        padding: 20px;
+        min-width: unset;
+        width: 100%;
+    }
+
+    /* Fix Downloads Grid */
+    .download-grid {
+        flex-direction: column;
+    }
+    .btn-download {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Specific Fix for very small screens (iPhone SE, etc.) */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 1.5rem !important;
+    }
+    .logo h2 {
+        display: none; /* Hide text, keep icon if screen is too narrow */
+    }
 }
