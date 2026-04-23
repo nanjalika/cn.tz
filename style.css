@@ -299,6 +299,7 @@ button:hover, .btn:hover, input[type="submit"]:hover {
 
     /* FULL SCREEN MOBILE MENU */
     .mobile-menu {
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
