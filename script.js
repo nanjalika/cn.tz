@@ -105,10 +105,11 @@ if(slides.length > 0) {
 }
 
 // SERVICES PAGE SECTION NAVIGATION BUTTONS
+const pageInner = document.querySelector(".page-inner");
 const sectionButtons = document.querySelectorAll(".page-screen");
 const scrollUp = document.getElementById("scrollUp");
 const scrollDown = document.getElementById("scrollDown");
-if (scrollUp && scrollDown && sectionButtons.length > 0) {
+if (pageInner && scrollUp && scrollDown && sectionButtons.length > 0) {
     let currentSection = 0;
 
     const updateButtons = () => {
@@ -117,11 +118,7 @@ if (scrollUp && scrollDown && sectionButtons.length > 0) {
     };
 
     const updateSections = () => {
-        sectionButtons.forEach((section, index) => {
-            section.classList.toggle("active", index === currentSection);
-            section.classList.toggle("inactive-up", index < currentSection);
-            section.classList.toggle("inactive-down", index > currentSection);
-        });
+        pageInner.style.transform = `translateY(-${currentSection * 100}vh)`;
         updateButtons();
     };
 

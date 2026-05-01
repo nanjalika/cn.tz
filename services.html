@@ -28,6 +28,11 @@
         margin-top: 10px;
     }
 
+    body.services-page {
+        overflow: hidden;
+        background: var(--navy);
+    }
+
     .page-frame {
         position: relative;
         height: calc(100vh - 100px);
@@ -35,27 +40,16 @@
         overflow: hidden;
     }
 
+    .page-inner {
+        position: relative;
+        width: 100%;
+        transition: transform 0.8s ease;
+    }
+
     .page-screen {
-        position: absolute;
-        inset: 0;
+        min-height: calc(100vh - 100px);
+        width: 100%;
         overflow-y: auto;
-        scroll-behavior: smooth;
-        transform: translateY(100%);
-        transition: transform 0.6s ease;
-        z-index: 1;
-    }
-
-    .page-screen.active {
-        transform: translateY(0);
-        z-index: 2;
-    }
-
-    .page-screen.inactive-up {
-        transform: translateY(-100%);
-    }
-
-    .page-screen.inactive-down {
-        transform: translateY(100%);
     }
 
     .page-nav {
@@ -88,12 +82,14 @@
 
     .page-nav button:hover:not(:disabled) {
         transform: translateY(-2px);
-        background: rgba(255,255,255,0.18);
+        background: var(--paleblue);
+        color: var(--navy);
     }
 
     .page-nav button:disabled {
         opacity: 0.35;
         cursor: not-allowed;
+        background: rgba(255,255,255,0.08);
     }
 
     .page-nav::before {
@@ -117,9 +113,10 @@
     }
 
     .services-grid .card:hover {
-        transform: translateY(-6px);
-        border-color: rgba(255,255,255,0.2);
-        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22);
+        transform: translateY(-8px);
+        border-color: rgba(230,240,255,0.4);
+        box-shadow: 0 30px 70px rgba(18,58,111,0.45);
+        background: linear-gradient(180deg, rgba(18,58,111,1), rgba(11,30,60,0.98));
     }
 
     .services-grid .card h3 {
@@ -144,8 +141,8 @@
 
     /* Combined Why Choose Us & Testimonials Section */
     .combined-section {
-        background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
-        padding: 80px 0;
+        background: linear-gradient(180deg, rgba(11,30,60,0.96), rgba(18,58,111,0.98));
+        padding: 60px 0;
         position: relative;
         overflow: hidden;
     }
@@ -174,16 +171,16 @@
     }
 
     .why-choose-us {
-        padding: 40px;
-        background: rgba(255,255,255,0.05);
+        margin-top: auto;
+        padding: 35px;
+        background: rgba(255,255,255,0.08);
         border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.12);
+        backdrop-filter: blur(12px);
     }
 
     .why-choose-us h2 {
         text-align: center;
-        margin-bottom: 30px;
         font-size: 2.2rem;
         color: var(--white);
         position: relative;
@@ -219,8 +216,8 @@
     }
 
     .why-list li:hover {
-        transform: translateX(5px);
-        background: rgba(255,255,255,0.08);
+        transform: translateX(6px);
+        background: rgba(255,255,255,0.12);
     }
 
     .why-list li::before {
@@ -248,8 +245,10 @@
     }
 
     .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        transform: translateY(-8px);
+        box-shadow: 0 28px 60px rgba(18,58,111,0.3);
+        border-color: rgba(230,240,255,0.3);
+        background: rgba(255,255,255,0.12);
     }
 
     .testimonial-stars {
@@ -347,6 +346,7 @@
 </div>
 
 <div class="page-frame">
+  <div class="page-inner">
 <section id="what-we-do" class="section page-screen active">
   <div class="container">
     <h1 style="text-align: center; font-size: 3rem; margin-bottom: 20px;" 
@@ -385,7 +385,8 @@
     </div>
   </div>
 </section>
-<section id="why-choose-us" class="section dark combined-section page-screen inactive-down">
+<div class="page-screen inactive-down">
+<section id="why-choose-us" class="section dark combined-section">
     <div class="container combined-container">
         <div class="why-choose-us">
             <h2 data-en="Why Choose Us" data-zh="为什么选择我们">Why Choose Us</h2>
@@ -409,8 +410,6 @@
         </div>
     </div>
 </section>
-</div>
-
 
 <footer class="footer">
   <p>
@@ -419,6 +418,8 @@
   </p>
    <p>Dar es Salaam, Tanzania  ©️ 2026 中坦达资</p>
 </footer>
+</div>
+</div>
 
 <script src="script.js"></script>
 </body>
