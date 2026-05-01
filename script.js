@@ -103,3 +103,41 @@ if(slides.length > 0) {
         index = (index + 1) % slides.length;
     }, 2500);
 }
+
+// SERVICES PAGE SECTION NAVIGATION BUTTONS
+const sectionButtons = document.querySelectorAll(".page-screen");
+const scrollUp = document.getElementById("scrollUp");
+const scrollDown = document.getElementById("scrollDown");
+if (scrollUp && scrollDown && sectionButtons.length > 0) {
+    let currentSection = 0;
+
+    const updateButtons = () => {
+        scrollUp.disabled = currentSection === 0;
+        scrollDown.disabled = currentSection === sectionButtons.length - 1;
+    };
+
+    const updateSections = () => {
+        sectionButtons.forEach((section, index) => {
+            section.classList.toggle("active", index === currentSection);
+            section.classList.toggle("inactive-up", index < currentSection);
+            section.classList.toggle("inactive-down", index > currentSection);
+        });
+        updateButtons();
+    };
+
+    scrollUp.addEventListener("click", () => {
+        if (currentSection > 0) {
+            currentSection -= 1;
+            updateSections();
+        }
+    });
+
+    scrollDown.addEventListener("click", () => {
+        if (currentSection < sectionButtons.length - 1) {
+            currentSection += 1;
+            updateSections();
+        }
+    });
+
+    updateSections();
+}
