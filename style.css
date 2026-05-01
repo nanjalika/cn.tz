@@ -157,7 +157,11 @@ button, .btn, .btn-download, input[type="submit"] {
     cursor: pointer;
     font-weight: 600;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
     transition: all 0.3s ease;
 }
 
