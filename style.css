@@ -411,3 +411,63 @@ button:hover, .btn:hover, input[type="submit"]:hover {
     .counter { font-size: 2.5rem; }
     .container { width: 90%; }
 }
+
+/* --- LAYOUT FOR FORM & DOWNLOADS ROW --- */
+.two-column-layout {
+    display: flex;
+    gap: 40px;
+    align-items: stretch; /* Makes both boxes the same height */
+    margin-bottom: 60px;
+}
+
+.form-box {
+    flex: 2; /* Form is wider */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.downloads-box {
+    flex: 1; /* Downloads column is narrower */
+    background: var(--navy-light);
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.download-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* --- TITLES --- */
+.main-section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+    color: var(--paleblue);
+}
+
+.box-title {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
+/* --- LEADERSHIP LAYOUT --- */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* --- RESPONSIVENESS (Stacks columns on mobile) --- */
+@media (max-width: 900px) {
+    .two-column-layout {
+        flex-direction: column;
+    }
+}

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>中坦达资 | CONTACT US</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -13,75 +12,31 @@
 <header class="header">
   <div class="container flex">
     <div class="logo">
-        <img src="images/logo.png" alt="中坦达资logo">
-        <h2 data-en="Zhongtan Dazi" data-zh="中坦达资">中坦达资</h2>
+        <img src="images/logo.png" alt="logo">
+        <h2 data-en="中坦达资" data-zh="中坦达资">中坦达资</h2>
     </div>
-
     <nav>
       <a href="index.html" data-en="Home" data-zh="首页"></a>
       <a href="services.html" data-en="Services" data-zh="服务"></a>
       <a href="tanzania.html" data-en="Tanzania" data-zh="坦桑尼亚"></a>
-      <a href="contact.html" data-en="Contact Us" data-zh="联系我们"></a>
+      <a href="contact.html" class="active" data-en="Contact us" data-zh="联系我们"></a>
       <button id="langToggle">中文</button>
     </nav>
-
      <button id="hamburger">☰</button>
   </div>
-
-  <div id="mobileMenu" class="mobile-menu">
-    <div class="mobile-content">
-      <span class="close-menu" onclick="closeMenu()">×</span>
-      <nav class="mobile-nav">
-        <a href="index.html" data-en="Home" data-zh="首页" onclick="closeMenu()"></a>
-        <a href="services.html" data-en="Services" data-zh="服务" onclick="closeMenu()"></a>
-        <a href="tanzania.html" data-en="Tanzania" data-zh="坦桑尼亚" onclick="closeMenu()"></a>
-        <a href="contact.html" data-en="Contact Us" data-zh="联系我们" onclick="closeMenu()"></a>
-      </nav>
-      <button id="langToggleMobile">中文</button>
-    </div>
-  </div>  
 </header>
 
-<section id="team-download-division" class="section">
-  <div class="container">
-    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;" 
-        data-en="Meet Our Leadership" 
-        data-zh="会见我们的领导团队"></h2>
+<main class="main-content">
+  <!-- SECTION: GET IN TOUCH (Form + Downloads in one row) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="main-section-title" data-en="Get in touch" data-zh="联系我们"></h2>
 
-    <div class="team-container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-        <div class="member-card">
-            <img src="images/nathanael.png" alt="Nathanael" class="member-photo">
-            <h3 class="member-name">Nathanael Njalika</h3>
-            <span class="member-position">
-                <span data-en="Founder & Chief Consultant" data-zh="创始人兼首席顾问"></span>
-            </span>
-            <p class="member-desc">
-                <span data-en="Leads the strategic vision of Zhongtan Dazi, specializing in bridging international business relations and Tanzanian market expansion through expert and professional consultancy." 
-                      data-zh="Nathanael 领导中坦恒达的战略愿景，专门通过专家咨询架起国际业务关系与坦桑尼亚市场扩张的桥梁。"></span>
-            </p>
-        </div>
-
-        <div class="member-card">
-            <img src="images/abdallah.png" alt="Abdallah" class="member-photo">
-            <h3 class="member-name">Abdallah Mbanguly</h3>
-            <span class="member-position">
-                <span data-en="Managing Director & Tax Associate" data-zh="财务与税务总监"></span>
-            </span>
-            <p class="member-desc">
-                <span data-en="Oversees the financial integrity and tax compliance frameworks for our clients, ensuring all operations align with Tanzanian regulatory standards." 
-                      data-zh="Abdalla 负责监督客户的财务诚信和税务合规框架，确保所有业务均符合坦桑尼亚监管标准。"></span>
-            </p>
-        </div>
-    </div>
-  </div>
-</section>
-
-<section class="section dark">
-  <div class="container">
-    <div class="form-box">
-      <h3 style="text-align: center;" data-en="Fill the form below" data-zh="请填写以下表格"></h3>
-      
-      <form action="https://formspree.io/f/mgopzdqa" method="POST">
+      <div class="two-column-layout">
+        <!-- COLUMN 1: FORM -->
+        <div class="form-box">
+          <h3 class="box-title" data-en="Fill the form below" data-zh="请填写以下表格"></h3>
+          <form action="https://formspree.io/f/xrejbnjo" method="POST">
         <input type="text" name="name" placeholder="Name / 姓名" required>
         <input type="email" name="email" placeholder="Email / 邮箱" required>
         
@@ -105,7 +60,7 @@
         </select>
 
         <textarea name="message" placeholder="请详细说明您的需求"></textarea>
-        <button type="submit" class="btn" style="width: 100%;" data-en="Submit" data-zh="提交"></button>
+        <button type="submit" class="btn" style="width: 50%; margin-left: 25%;" data-en="Submit" data-zh="提交"></button>
       </form>
 
       <div class="agree-box" style="margin-top: 15px;">
@@ -114,34 +69,44 @@
               data-zh="提交此表格即表示我同意相关条款与条件。"></span>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section">
-    <div class="container">
+        <!-- COLUMN 2: DOWNLOADABLES -->  
         <div class="downloads-box">
-            <h3 class="downloads-title" data-en="Downloadables" data-zh="资源与文档"></h3>
-            <div class="download-grid">
-                <a href="images/business-card.pdf" download class="btn-download">
-                    <span data-en="Business Card" data-zh="名片下载"></span>
-                </a>
-                <a href="images/inquiry-form.png" download class="btn-download">
-                    <span data-en="Inquiry Form" data-zh="咨询表"></span>
-                </a>
-                <a href="terms-and-conditions.pdf" download class="btn-download">
-                    <span data-en="Terms & Conditions" data-zh="条款和条件"></span>
-                </a>
-            </div>
+          <h3 class="box-title" data-en="Downloadables" data-zh="资源与文档"></h3>
+          <div class="download-stack">
+              <a href="images/business-card.pdf" download class="btn-download"><span data-en="Business Card" data-zh="名片下载"></span></a>
+              <a href="images/inquiry-form.png" download class="btn-download" style="margin-bottom: 10px;"><span data-en="Inquiry Form" data-zh="咨询表"></span></a>
+              <a href="#" style="width: 50%; margin-left: 25%; text-decoration: none; font-weight: 700; border-radius: 10px; background-color: var(--white); color: var(--navy); padding: 10px; margin-top: 10px;" data-en="QUICK CONTACT " data-zh="快速联系"></a>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <!-- SECTION: LEADERSHIP (Below) -->
+  <section class="section dark">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;" data-en="Meet Our Leadership" data-zh="会见我们的领导团队"></h2>
+      <div class="team-container">
+          <div class="member-card">
+              <img src="images/nathanael.png" alt="Nathanael" class="member-photo">
+              <h3 class="member-name">Nathanael Njalika</h3>
+              <span class="member-position" data-en="Founder & Chief Consultant" data-zh="创始人兼首席顾问"></span>
+              <p class="member-desc" data-en="Expert professional consultancy for Tanzanian market expansion." data-zh="针对坦桑尼亚市场扩张的专家专业咨询。"></p>
+          </div>
+          <div class="member-card">
+              <img src="images/abdallah.png" alt="Abdallah" class="member-photo">
+              <h3 class="member-name">Abdallah Mbanguly</h3>
+              <span class="member-position" data-en="Managing Director & Tax Associate" data-zh="财务与税务总监"></span>
+              <p class="member-desc" data-en="Oversees financial integrity and regulatory standards." data-zh="负责监督财务诚信和监管标准。"></p>
+          </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
-  <p>
-    <a href="#" onclick="openTerms()" data-en="Terms & Conditions" data-zh="条款和条件">Terms & Conditions</a> |
-    <a href="#" onclick="openPrivacy()" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a>
-  </p>
-   <p>Dar es Salaam, Tanzania  ©️ 2026 中坦达资</p>
+  <p>Dar es Salaam, Tanzania  ©️ 2026 中坦达资</p>
 </footer>
 
 <script src="script.js"></script>
