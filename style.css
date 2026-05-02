@@ -414,21 +414,21 @@ button:hover, .btn:hover, input[type="submit"]:hover {
 
 /* --- LAYOUT FOR FORM & DOWNLOADS ROW --- */
 .two-column-layout {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 7fr 3fr; /* Form takes 7/10, Downloads take 3/10 */
     align-items: stretch; /* Makes both boxes the same height */
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .form-box {
-    flex: 2; /* Form is wider */
+    flex: 7; /* Form is wider */
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 12px;
 }
 
 .downloads-box {
-    flex: 1; /* Downloads column is narrower */
+    flex: 3; /* Downloads column is narrower */
     background: var(--navy-light);
     padding: 30px;
     border-radius: 12px;
@@ -445,7 +445,7 @@ button:hover, .btn:hover, input[type="submit"]:hover {
 /* --- TITLES --- */
 .main-section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 2.8rem;
     color: var(--paleblue);
 }
@@ -470,4 +470,7 @@ button:hover, .btn:hover, input[type="submit"]:hover {
     .two-column-layout {
         flex-direction: column;
     }
+}
+section {
+    padding: 60px 0;
 }

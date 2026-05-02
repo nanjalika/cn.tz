@@ -39,8 +39,9 @@
           <form action="https://formspree.io/f/xrejbnjo" method="POST">
         <input type="text" name="name" placeholder="Name / 姓名" required>
         <input type="email" name="email" placeholder="Email / 邮箱" required>
-        
-        <select name="service" required>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <select name="service" style="height: 37px; border-radius: 5px;" required>
           <option value="" disabled selected data-en="Consulting For" data-zh="咨询服务类型"></option>
           <option data-en="Company Registration" data-zh="公司注册"></option>
           <option data-en="Legal Services" data-zh="法律服务"></option>
@@ -49,7 +50,7 @@
           <option data-en="Other" data-zh="其他"></option>
         </select>
 
-        <select name="location" required>
+        <select name="location" style="height: 37px; border-radius: 5px;" required>
           <option value="" disabled selected data-en="Select Location" data-zh="选择城市"></option>
           <option data-en="Dar es Salaam" data-zh="达累斯萨拉姆"></option>
           <option data-en="Arusha" data-zh="阿鲁沙"></option>
@@ -58,13 +59,12 @@
           <option data-en="Mwanza" data-zh="姆万扎"></option>
           <option data-en="Other City" data-zh="其他城市"></option>
         </select>
-
-        <textarea name="message" placeholder="请详细说明您的需求"></textarea>
+        </div>
+        <textarea name="message" style="min-height: 6rem; max-height: 6rem; min-width: 30rem; max-width: 34rem;" placeholder="请详细说明您的需求"></textarea>
         <button type="submit" class="btn" style="width: 50%; margin-left: 25%;" data-en="Submit" data-zh="提交"></button>
       </form>
 
       <div class="agree-box" style="margin-top: 15px;">
-        <input type="checkbox" checked disabled>
         <span data-en="By submitting this form I agree to the terms and conditions." 
               data-zh="提交此表格即表示我同意相关条款与条件。"></span>
       </div>
@@ -76,7 +76,7 @@
           <div class="download-stack">
               <a href="images/business-card.pdf" download class="btn-download"><span data-en="Business Card" data-zh="名片下载"></span></a>
               <a href="images/inquiry-form.png" download class="btn-download" style="margin-bottom: 10px;"><span data-en="Inquiry Form" data-zh="咨询表"></span></a>
-              <a href="#" style="width: 50%; margin-left: 25%; text-decoration: none; font-weight: 700; border-radius: 10px; background-color: var(--white); color: var(--navy); padding: 10px; margin-top: 10px;" data-en="QUICK CONTACT " data-zh="快速联系"></a>
+              <a href="#" style="width: 50%; margin-left: 25%; text-decoration: none; font-weight: 700; border-radius: 10px; background-color: var(--white); color: var(--navy); padding: 10px; margin-top: 6rem;" data-en="QUICK CONTACT " data-zh="快速联系"></a>
           </div>
         </div>
       </div>
